@@ -1,6 +1,7 @@
 (import monoid "monoid.cic")
 
-;; 测试 dot 语法
+;; 测试 dot 语法。
+;; - 应该不会用这个语法。
 
 (define-class group (monoid)
   .inverse (-> @element @element)

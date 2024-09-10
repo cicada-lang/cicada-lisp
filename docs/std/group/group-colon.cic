@@ -1,6 +1,8 @@
 (import monoid "monoid:cic")
 
-;; 测试 : 为分词符的语法
+;; 测试 : 为分词符的语法。
+;; - 可能会支持，但是开始的时候一定是不支持的。
+;; - 设计的初期语法要保守。
 
 (define-class group (monoid)
   :inverse (-> @element @element)
