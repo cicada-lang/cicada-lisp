@@ -1,0 +1,9 @@
+(import semigroup "semigroup.cic")
+
+;; 当有继承的时候，带有 @ sigil 还挺合理的。
+
+(define-class monoid (semigroup)
+  :id element
+
+  :id-left (forall ((x @element)) (equal @element (mul @id x) x))
+  :id-right (forall ((x @element)) (equal @element (mul x @id) x)))

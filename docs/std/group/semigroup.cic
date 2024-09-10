@@ -1,0 +1,12 @@
+(define-class semigroup ()
+  :element type
+
+  :mul (-> @element @element @element)
+
+  :mul-associative
+  (forall ((x @element)
+           (y @element)
+           (z @element))
+    (equal @element
+           (@mul x (@mul y z))
+           (@mul (@mul x y) z))))
