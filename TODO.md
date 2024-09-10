@@ -1,6 +1,9 @@
 # std
 
-[std] groupoid/ -- Groupoid
+[std] groupoid/ -- Groupoid -- 为 super 设计语法
+
+- 也许，应该把 self 和 super 作为 class 中的特殊 symbol
+
 [std] groupoid/ -- trivialGroupoid
 
 [std] group/ -- GroupHomomorphism
