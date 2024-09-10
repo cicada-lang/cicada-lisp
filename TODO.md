@@ -1,7 +1,5 @@
 # std
 
-[std] group/ -- group-colon.cic -- 测试 : 为分词符的语法
-
 [std] groupoid/ -- Groupoid
 [std] groupoid/ -- trivialGroupoid
 

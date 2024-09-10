@@ -1,17 +1,17 @@
-(import monoid "monoid.cic")
+(import monoid "monoid:cic")
 
-;; 测试 dot 语法
+;; 测试 : 为分词符的语法
 
 (define-class group (monoid)
-  .inverse (-> @element @element)
+  :inverse (-> @element @element)
 
-  .inverse-left
+  :inverse-left
   (forall ((x @element))
     (equal @element
            (@mul (@inverse x) x)
            @id))
 
-  .inverse-right
+  :inverse-right
   (forall ((x @element))
     (equal @element
            (@mul x (@inverse x))
@@ -19,8 +19,8 @@
 
 (claim group-div
   (forall ((g group))
-    (-> (g.element) (g.element)
-        (g.element))))
+    (-> (g:element) (g:element)
+        (g:element))))
 
 (define (group-div g x y)
-  (g.mul x (g.inverse y)))
+  (g:mul x (g:inverse y)))
