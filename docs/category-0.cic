@@ -1,0 +1,47 @@
+;; To each species of mathematical structure,
+;; there corresponds a category whose objects have that structure,
+;; and whose morphisms preserve it.
+
+;; 用明显的 self 在语法上是没法接受的，看起来太嘈杂了。
+
+(define-class category ()
+  :object type
+  :morphism (-> (self :object) (self :object) type)
+  :id (forall ((x (self :object))) (self :morphism x x))
+
+  :compose
+  (implicit ((x (self :object))
+             (y (self :object))
+             (z (self :object)))
+    (forall ((f (self :morphism x y))
+             (g (self :morphism y z)))
+      (self :morphism x z)))
+
+  :id-left
+  (implicit ((x (self :object))
+             (y (self :object)))
+    (forall ((f (self :morphism x y)))
+      (equal (self :morphism x y)
+             (self :compose (self :id x) f)
+             f)))
+
+  :id-right
+  (implicit ((x (self :object))
+             (y (self :object)))
+    (forall ((f (self :morphism x y)))
+      (equal (self :morphism x y)
+             (self :compose f (self :id y))
+             f)))
+
+
+  :compose-associative
+  (implicit ((x (self :object))
+             (y (self :object))
+             (z (self :object))
+             (w (self :object)))
+    (forall ((f (self :morphism x y))
+             (g (self :morphism y z))
+             (h (self :morphism z w)))
+      (equal (self :morphism x w)
+             (self :compose f (self :compose g h))
+             (self :compose (self :compose f g) h)))))

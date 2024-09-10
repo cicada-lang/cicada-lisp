@@ -1,0 +1,47 @@
+;; To each species of mathematical structure,
+;; there corresponds a category whose objects have that structure,
+;; and whose morphisms preserve it.
+
+;; 不用 self 但是必须要有一个前缀来区分。
+
+(define-class category ()
+  :object type
+  :morphism (-> @object @object type)
+  :id (forall ((x @object)) (@morphism x x))
+
+  :compose
+  (implicit ((x @object)
+             (y @object)
+             (z @object))
+    (forall ((f (@morphism x y))
+             (g (@morphism y z)))
+      (@morphism x z)))
+
+  :id-left
+  (implicit ((x @object)
+             (y @object))
+    (forall ((f (@morphism x y)))
+      (equal (@morphism x y)
+             (@compose (@id x) f)
+             f)))
+
+  :id-right
+  (implicit ((x @object)
+             (y @object))
+    (forall ((f (@morphism x y)))
+      (equal (@morphism x y)
+             (@compose f (@id y))
+             f)))
+
+
+  :compose-associative
+  (implicit ((x @object)
+             (y @object)
+             (z @object)
+             (w @object))
+    (forall ((f (@morphism x y))
+             (g (@morphism y z))
+             (h (@morphism z w)))
+      (equal (@morphism x w)
+             (@compose f (@compose g h))
+             (@compose (@compose f g) h)))))
