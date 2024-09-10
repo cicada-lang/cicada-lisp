@@ -2,8 +2,6 @@
 
 [std] group/ -- group-dot.cic -- 测试 dot 语法
 
-[std] 决定在 class 中使用 ruby-like @ sigil -- 修改 category/
-
 [std] groupoid/ -- Groupoid
 [std] groupoid/ -- trivialGroupoid
 
