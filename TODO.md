@@ -1,6 +1,7 @@
 # book
 
-[book] 1997-smalltalk-best-practice-patterns -- patterns/
+[book] 1997-smalltalk-best-practice-patterns -- 3. BEHAVIOR
+
 [book] 2018-refactoring
 
 # diary
