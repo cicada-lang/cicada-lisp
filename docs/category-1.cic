@@ -3,6 +3,7 @@
 ;; and whose morphisms preserve it.
 
 ;; 不用 self 但是必须要有一个前缀来区分。
+;; 尝试以下 ruby 的 @ 前缀。
 
 (define-class category ()
   :object type
