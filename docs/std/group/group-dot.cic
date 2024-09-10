@@ -1,0 +1,24 @@
+(import monoid "monoid.cic")
+
+(define-class group (monoid)
+  .inverse (-> @element @element)
+
+  .inverse-left
+  (forall ((x @element))
+    (equal @element
+           (@mul (@inverse x) x)
+           @id))
+
+  .inverse-right
+  (forall ((x @element))
+    (equal @element
+           (@mul x (@inverse x))
+           @id)))
+
+(claim group-div
+  (forall ((g group))
+    (-> (g.element) (g.element)
+        (g.element))))
+
+(define (group-div g x y)
+  (g.mul x (g.inverse y)))

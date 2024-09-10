@@ -1,6 +1,6 @@
 # std
 
-[std] group/ -- group-dot.cic -- 测试 dot 语法
+[std] group/ -- group-colon.cic -- 测试 : 为分词符的语法
 
 [std] groupoid/ -- Groupoid
 [std] groupoid/ -- trivialGroupoid
