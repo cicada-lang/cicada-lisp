@@ -1,12 +1,11 @@
+# book
+
+[book] 1997-smalltalk-best-practice-patterns -- patterns/
+[book] 2018-refactoring
+
 # diary
 
 [diary] 关于项目启动的日记 -- inner 中已经有一部分了
-
-# book
-
-[book] 1997-smalltalk-best-practice-patterns -- 修复第一个例子
-[book] 1997-smalltalk-best-practice-patterns -- patterns/
-[book] 2018-refactoring
 
 # std
 
