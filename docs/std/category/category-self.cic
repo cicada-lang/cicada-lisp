@@ -33,7 +33,6 @@
              (self :compose f (self :id y))
              f)))
 
-
   :compose-associative
   (implicit ((x (self :object))
              (y (self :object))

@@ -34,7 +34,6 @@
              (@compose f (@id y))
              f)))
 
-
   :compose-associative
   (implicit ((x @object)
              (y @object)
