@@ -1,13 +1,3 @@
-# book
-
-[book] 1997-smalltalk-best-practice-patterns -- 3. BEHAVIOR
-
-[book] 2018-refactoring
-
-# diary
-
-[diary] 关于项目启动的日记 -- inner 中已经有一部分了
-
 # std
 
 [std] groupoid/ -- Groupoid -- 为 super 设计语法
