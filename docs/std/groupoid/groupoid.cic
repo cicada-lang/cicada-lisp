@@ -1,0 +1,17 @@
+(import category isomorphism "../category/index.cic")
+
+(define-class groupoid (category)
+  :inverse
+  (implicit ((x @object)
+             (y @object))
+    (-> (@morphism x y)
+        (@morphism y x)))
+
+
+  ;; NOTE The following use of `isomorphism`
+  ;;   is an example of "partly fulfilled object construction".
+  :inverse-iso
+  (implicit ((x @object)
+             (y @object))
+    (forall (f (@morphism x y))
+      (isomorphism @super x y f (@inverse f)))))
