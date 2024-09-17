@@ -2,8 +2,7 @@
 ;; there corresponds a category whose objects have that structure,
 ;; and whose morphisms preserve it.
 
-;; 不用 self 但是必须要有一个前缀来区分。
-;; 尝试以下 ruby 的 @ 前缀。
+;; 模仿 ruby，用 @ 前缀来区分 instance variables。
 
 (define-class category ()
   :object type

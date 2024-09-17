@@ -17,7 +17,6 @@
 [std] category/ -- index
 [std] category/ -- terminalIsoUnique
 [std] category/ -- terminalIsoWithoutFulfillingClass
-[std] category/ -- terminalIsoWithoutFulfillingClass.out
 [std] category/ -- trivialCategory
 
 [std] equality/
