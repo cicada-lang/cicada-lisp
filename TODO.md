@@ -1,10 +1,8 @@
 # std
 
-[std] groupoid/ -- trivialGroupoid
-
-[std] group/ -- GroupHomomorphism
 [std] group/ -- trivialSemigroup
 [std] group/ -- trivialGroup
+[std] group/ -- GroupHomomorphism
 [std] group/ -- groupCategory
 
 [std] category/ -- Epimorphism

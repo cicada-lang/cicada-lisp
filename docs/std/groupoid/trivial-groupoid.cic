@@ -1,0 +1,18 @@
+(import groupoid "groupoid.cic")
+(import isomorphism trivial-category "../category/index.cic")
+
+(define trivial-isomorphism
+  (create isomorphism
+    :cat trivial-category
+    :dom sole
+    :cod sole
+    :morphism sole
+    :inverse sole
+    :inverseLeft refl
+    :inverseRight refl))
+
+(define trivial-groupoid
+  (create groupoid
+    ...trivial-category
+    :inverse (lambda (f) sole)
+    :inverseIso (lambda (f) trivial-isomorphism)))
