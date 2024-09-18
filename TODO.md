@@ -1,6 +1,5 @@
 # std
 
-[std] group/ -- trivialSemigroup
 [std] group/ -- trivialGroup
 [std] group/ -- GroupHomomorphism
 [std] group/ -- groupCategory
