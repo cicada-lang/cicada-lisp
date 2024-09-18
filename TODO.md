@@ -1,18 +1,18 @@
 # std
 
-[std] group/ -- group-homomorphism
-[std] group/ -- group-category
+[std] group/ -- group-homomorphism.test.cic
+[std] group/ -- group-category.cic
 
-[std] category/ -- epimorphism
-[std] category/ -- functor
-[std] category/ -- initial
-[std] category/ -- isomorphism
-[std] category/ -- monomorphism
-[std] category/ -- natural-transformation
-[std] category/ -- terminal
-[std] category/ -- index
-[std] category/ -- terminal-iso-unique
-[std] category/ -- trivial-category
+[std] category/ -- epimorphism.cic
+[std] category/ -- functor.cic
+[std] category/ -- initial.cic
+[std] category/ -- isomorphism.cic
+[std] category/ -- monomorphism.cic
+[std] category/ -- natural-transformation.cic
+[std] category/ -- terminal.cic
+[std] category/ -- index.cic
+[std] category/ -- terminal-iso-unique.cic
+[std] category/ -- trivial-category.cic
 
 [std] equality/
 
