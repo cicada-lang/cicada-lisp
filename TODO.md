@@ -1,20 +1,18 @@
 # std
 
-[std] group/ -- trivialGroup
-[std] group/ -- GroupHomomorphism
-[std] group/ -- groupCategory
+[std] group/ -- group-homomorphism
+[std] group/ -- group-category
 
-[std] category/ -- Epimorphism
-[std] category/ -- Functor
-[std] category/ -- Initial
-[std] category/ -- Isomorphism
-[std] category/ -- Monomorphism
-[std] category/ -- NaturalTransformation
-[std] category/ -- Terminal
+[std] category/ -- epimorphism
+[std] category/ -- functor
+[std] category/ -- initial
+[std] category/ -- isomorphism
+[std] category/ -- monomorphism
+[std] category/ -- natural-transformation
+[std] category/ -- terminal
 [std] category/ -- index
-[std] category/ -- terminalIsoUnique
-[std] category/ -- terminalIsoWithoutFulfillingClass
-[std] category/ -- trivialCategory
+[std] category/ -- terminal-iso-unique
+[std] category/ -- trivial-category
 
 [std] equality/
 
