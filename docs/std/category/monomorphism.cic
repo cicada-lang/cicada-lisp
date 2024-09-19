@@ -1,0 +1,20 @@
+(import category "category.cic")
+
+(define-class monomorphism ()
+  :cat category
+  :dom (@cat :object)
+  :cod (@cat :object)
+  :morphism (@cat :morphism @dom @cod)
+
+  :cancel-right
+  (implicit ((x (@cat :object))
+             (f (@cat :morphism x @dom))
+             (g (@cat :morphism x @dom)))
+    (-> (equal (@cat :morphism x @cod)
+               (@cat :compose f @morphism)
+               (@cat :compose g @morphism))
+        (equal (@cat :morphism x @dom) f g))))
+
+;; NOTE Examples:
+;;   (check mono (monomorphism cat x y))
+;;   (check (mono :morphism) (mono :cat :morphism x y))
