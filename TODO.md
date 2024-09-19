@@ -1,5 +1,7 @@
 # std
 
+[std] replace `create` by `the` -- pure structural subtyping
+
 [std] category/ -- functor.cic
 [std] category/ -- natural-transformation.cic
 
