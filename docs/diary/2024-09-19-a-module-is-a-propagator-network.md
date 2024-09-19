@@ -17,3 +17,8 @@ module 的概念会变得很简单：
 - 首先一个 module 对应一个 file，会让理解变简单。
 - 其次一个 module 中会记录它对于某些名字的理解，等待被 import。
   每个名字可以被理解为一个 propagator network 中的 cell。
+
+这么看来，引用某个 module 中的名字，
+可能也应该用 propagator 来实现，
+而不是直接引用 cell，
+-- 保持二分图的约束条件。
