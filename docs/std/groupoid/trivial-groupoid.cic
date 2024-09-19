@@ -11,8 +11,8 @@
     :inverseLeft refl
     :inverseRight refl))
 
-(claim trivial-groupoid (groupoid :object trivial))
 (define trivial-groupoid
-  (merge trivial-category
-    {:inverse (lambda (f) sole)
-     :inverseIso (lambda (f) trivial-isomorphism)}))
+  (the (groupoid :object trivial)
+    (merge trivial-category
+     {:inverse (lambda (f) sole)
+      :inverseIso (lambda (f) trivial-isomorphism)})))
