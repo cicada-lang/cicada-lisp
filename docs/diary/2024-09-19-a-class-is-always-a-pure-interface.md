@@ -27,3 +27,5 @@ date: 2024-09-19
 - 方案 B：
   定义 class 时允许带有 value，
   但是不支持 subclass 对 superclass 的 method 的 override。
+
+我还不确定应该如何选择。
