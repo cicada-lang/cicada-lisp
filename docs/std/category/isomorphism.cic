@@ -1,0 +1,21 @@
+(import category "category.cic")
+
+;; Two objects have the same structure iff they are isomorphic,
+;; and an "abstract object" is an isomorphism class of objects.
+
+(define-class isomorphism ()
+  :cat category
+  :dom (@cat :object)
+  :cod (@cat :object)
+  :morphism (@cat :morphism @dom @cod)
+  :inverse (@cat :morphism @cod @dom)
+
+  :inverse-left
+  (equal (@cat :morphism @dom @dom)
+         (@cat :compose @morphism @inverse)
+         (@cat :id @dom))
+
+  :inverse-right
+  (equal (@cat :morphism @cod @cod)
+         (@cat :compose @inverse @morphism)
+         (@cat :id cod)))
