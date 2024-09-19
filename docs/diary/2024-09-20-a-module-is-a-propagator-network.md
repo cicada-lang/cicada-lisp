@@ -1,6 +1,6 @@
 ---
 title: A Module is A Propagator Network
-date: 2024-09-19
+date: 2024-09-20
 ---
 
 首先，显然在类型检查的过程中 context 是一个 propagator network，

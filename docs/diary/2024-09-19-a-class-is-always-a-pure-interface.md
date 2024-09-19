@@ -12,14 +12,18 @@ date: 2024-09-19
 但是 super class 没有具体的 method，
 因此也没有需要 override super class 的 method 的问题。
 
-但是注意，
-generic function 要求我们用 nominal subtyping，
-而不能用 structural subtyping。
+---
 
-因为我们需 nominal 信息来在运行时做 dispatching。
+但是 fulfilling 一个 class 的过程，
+其实还是会生成带有具体 method 的 class。
 
-```scheme
-(define (display (self bordered-figure))
-  (display (as-figure self))
-  (display-border self))
-```
+这基本上说明了，不是实现带有具体 method 的 class 是不合理的。
+如果实现带有 method 的 class，但是不能 override 看起来又是不合理的。
+
+- 方案 A：
+  fulfilling class 使用带有 value 的 class，
+  但是定义 class 时不允许带有 value。
+
+- 方案 B：
+  定义 class 时允许带有 value，
+  但是不支持 subclass 对 superclass 的 method 的 override。
