@@ -10,15 +10,15 @@ date: 2024-09-18
 ```scheme
 (define (responsible (an-entry entry))
   (if (is-kind-of an-entry film)
-    (an-entry :producer)
-    (an-entry :author)))
+    (an-entry:producer)
+    (an-entry:author)))
 
 
 (define-handler (responsible (a-film film))
-  (a-film :producer))
+  (a-film:producer))
 
 (define-handler (responsible (an-entry entry))
-  (an-entry :author))
+  (an-entry:author))
 ```
 
 因为太常用了，所以也许 `define`
@@ -28,13 +28,13 @@ date: 2024-09-18
 ```scheme
 (define (responsible (an-entry entry))
   (if (is-kind-of an-entry film)
-    (an-entry :producer)
-    (an-entry :author)))
+    (an-entry:producer)
+    (an-entry:author)))
 
 
 (define (responsible (a-film film))
-  (a-film :producer))
+  (a-film:producer))
 
 (define (responsible (an-entry entry))
-  (an-entry :author))
+  (an-entry:author))
 ```
