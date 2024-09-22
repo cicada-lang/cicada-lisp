@@ -2,8 +2,8 @@
 (import functor "functor.cic")
 
 ;; To each natural translation,
-;; from a construction `F : A -> B`,
-;; to a construction `G : A -> B`,
+;; from a construction `F: A -> B`,
+;; to a construction `G: A -> B`,
 ;; there corresponds a natural transformation `F => G`.
 
 ;; This captures the concept of "natural translation".
@@ -41,13 +41,13 @@
   :tar (functor @dom @cod)
 
   :component
-  (forall ((x (@dom :object)))
-    (@cod :morphism (@src :map x) (@tar :map x)))
+  (forall ((x (@dom:object)))
+    (@cod:morphism (@src:map x) (@tar:map x)))
 
   :naturality
-  (implicit ((x (@dom :object))
-             (y (@dom :object)))
-    (forall ((f (@dom :morphism x y)))
-      (equal (@cod :morphism (@src :map x) (@tar :map y))
-             (@cod :compose (@component x) (@tar :fmap f))
-             (@cod :compose (@src :fmap f) (@component y))))))
+  (implicit ((x (@dom:object))
+             (y (@dom:object)))
+    (forall ((f (@dom:morphism x y)))
+      (equal (@cod:morphism (@src:map x) (@tar:map y))
+             (@cod:compose (@component x) (@tar:fmap f))
+             (@cod:compose (@src:fmap f) (@component y))))))

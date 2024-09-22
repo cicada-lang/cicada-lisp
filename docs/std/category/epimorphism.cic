@@ -2,15 +2,15 @@
 
 (define-class epimorphism ()
   :cat category
-  :dom (@cat :object)
-  :cod (@cat :object)
-  :morphism (@cat :morphism @dom @cod)
+  :dom (@cat:object)
+  :cod (@cat:object)
+  :morphism (@cat:morphism @dom @cod)
 
   :cancel-left
-  (implicit ((x (@cat :object))
-             (f (@cat :morphism @cod x))
-             (g (@cat :morphism @cod x)))
-    (-> (equal (@cat :morphism @dom x)
-               (@cat :compose @morphism f)
-               (@cat :compose @morphism g))
-        (equal (@cat :morphism @cod x) f g))))
+  (implicit ((x (@cat:object))
+             (f (@cat:morphism @cod x))
+             (g (@cat:morphism @cod x)))
+    (-> (equal (@cat:morphism @dom x)
+               (@cat:compose @morphism f)
+               (@cat:compose @morphism g))
+        (equal (@cat:morphism @cod x) f g))))

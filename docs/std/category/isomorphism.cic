@@ -5,17 +5,17 @@
 
 (define-class isomorphism ()
   :cat category
-  :dom (@cat :object)
-  :cod (@cat :object)
-  :morphism (@cat :morphism @dom @cod)
-  :inverse (@cat :morphism @cod @dom)
+  :dom (@cat:object)
+  :cod (@cat:object)
+  :morphism (@cat:morphism @dom @cod)
+  :inverse (@cat:morphism @cod @dom)
 
   :inverse-left
-  (equal (@cat :morphism @dom @dom)
-         (@cat :compose @morphism @inverse)
-         (@cat :id @dom))
+  (equal (@cat:morphism @dom @dom)
+         (@cat:compose @morphism @inverse)
+         (@cat:id @dom))
 
   :inverse-right
-  (equal (@cat :morphism @cod @cod)
-         (@cat :compose @inverse @morphism)
-         (@cat :id cod)))
+  (equal (@cat:morphism @cod @cod)
+         (@cat:compose @inverse @morphism)
+         (@cat:id cod)))

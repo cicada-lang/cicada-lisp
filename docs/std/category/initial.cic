@@ -2,10 +2,10 @@
 
 (define-class Initial ()
   :cat category
-  :object (@cat :object)
+  :object (@cat:object)
 
   :morphism
-  (forall ((x (@cat :object)))
+  (forall ((x (@cat:object)))
     (@cat:morphism @object x))
 
   :morphism-unique

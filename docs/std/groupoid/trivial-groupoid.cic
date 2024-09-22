@@ -12,7 +12,7 @@
     :inverse-right refl))
 
 (define trivial-groupoid
-  (create (groupoid :object trivial)
+  (create (groupoid:object trivial)
     ...trivial-category
     :inverse (lambda (f) sole)
     :inverse-iso (lambda (f) trivial-isomorphism)))
