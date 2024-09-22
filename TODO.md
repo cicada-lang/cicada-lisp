@@ -1,7 +1,5 @@
 # std
 
-[std] category/ -- natural-transformation.cic
-
 [std] category/ -- initial.cic
 [std] category/ -- terminal.cic
 [std] category/ -- terminal-iso-unique.cic

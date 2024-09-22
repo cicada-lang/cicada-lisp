@@ -1,0 +1,53 @@
+(import category "category.cic")
+(import functor "functor.cic")
+
+;; To each natural translation,
+;; from a construction `F : A -> B`,
+;; to a construction `G : A -> B`,
+;; there corresponds a natural transformation `F => G`.
+
+;; This captures the concept of "natural translation".
+
+;; The naturality condition of natural-transformation
+;; state squares commute.
+
+;; Which can be viewed as stating that
+;; the arrows in the two embeddings
+;; are "orthogonal" to the transforming arrows.
+
+;; This concept was the historical origin of category theory,
+;; since Eilenberg and MacLane (1945) used it to formalise
+;; the notion of an equivalence of homology theories,
+
+;; and then found that for this definition to make sense,
+;; they had to define functors,
+
+;; (A homology theory is a functor.)
+
+;; and for functors to make sense,
+;; they had to define categories.
+
+;; (A homology theory is a functor,
+;; from the category of topology spaces
+;; to the category of abelian-groups.)
+
+(define-class natural-transformation ()
+  :dom category
+  :cod category
+
+  ;; NOTE The following use of `Functor(dom, cod)`
+  ;;  is an example of fulfilling type.
+  :src (functor @dom @cod)
+  :tar (functor @dom @cod)
+
+  :component
+  (forall ((x (@dom :object)))
+    (@cod :morphism (@src :map x) (@tar :map x)))
+
+  :naturality
+  (implicit ((x (@dom :object))
+             (y (@dom :object)))
+    (forall ((f (@dom :morphism x y)))
+      (equal (@cod :morphism (@src :map x) (@tar :map y))
+             (@cod :compose (@component x) (@tar :fmap f))
+             (@cod :compose (@src :fmap f) (@component y))))))
