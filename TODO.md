@@ -1,6 +1,7 @@
 # std
 
-[std] category/ -- initial.cic
+[std] drop the space before :
+
 [std] category/ -- terminal.cic
 [std] category/ -- terminal-iso-unique.cic
 
