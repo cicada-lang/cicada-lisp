@@ -1,0 +1,41 @@
+(import category "category.cic")
+
+;; To any natural construction on structures of one species,
+;; yielding structures of another species,
+;; there corresponds a functor
+;; from the category of the first species
+;; to the category of the second.
+
+;; For example, in the category of types in a programming language,
+;; type constructors are endo-functors,
+;; and endo-functors are often containers.
+
+;; Functor can also be called natural-construction,
+;; which will let the term `NaturalTransformation` make sense.
+
+(define-class functor ()                ;
+  :dom category
+  :cod category
+  :map (-> (@dom :object) (@cod :object))
+
+  :fmap
+  (implicit ((x (@dom :object))
+             (y (@dom :object)))
+    (forall ((f (@dom :morphism x y)))
+      (@cod :morphism (@map x) (@map y))))
+
+  :fmap-preserve-compose
+  (implicit ((x (@dom :object))
+             (y (@dom :object))
+             (z (@dom :object)))
+    (forall ((f (@dom :morphism x y))
+             (g (@dom :morphism y z)))
+      (equal (@cod :morphism (@map x) (@map z))
+             (@fmap (@dom :compose f g))
+             (@cod.compose (@fmap f) (@fmap g)))))
+
+  :fmap-preserve-id
+  (forall ((x (@dom :object)))
+    (equal (@cod :morphism (@map x) (@map x))
+           (@fmap (@dom :id x))
+           (@cod :id (@map x)))))

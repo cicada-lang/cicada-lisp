@@ -1,6 +1,5 @@
 # std
 
-[std] category/ -- functor.cic
 [std] category/ -- natural-transformation.cic
 
 [std] category/ -- initial.cic
