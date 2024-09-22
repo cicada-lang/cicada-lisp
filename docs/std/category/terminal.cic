@@ -1,14 +1,14 @@
 (import category "category.cic")
 
-(define-class initial ()
+(define-class terminal ()
   :cat category
   :object (@cat:object)
 
   :morphism
   (forall ((x (@cat:object)))
-    (@cat:morphism @object x))
+    (@cat:morphism x @object))
 
   :morphism-unique
   (implicit ((x (@cat:object)))
-    (forall ((f (@cat:morphism @object x)))
-      (equal (@cat:morphism @object x) f (@morphism x)))))
+    (forall ((f (@cat:morphism x @object)))
+      (equal (@cat:morphism x @object) f (@morphism x)))))

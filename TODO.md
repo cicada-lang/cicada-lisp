@@ -1,6 +1,5 @@
 # std
 
-[std] category/ -- terminal.cic
 [std] category/ -- terminal-iso-unique.cic
 
 [std] category/ -- index.cic
