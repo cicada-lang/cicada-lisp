@@ -1,3 +1,5 @@
+(export equal-map equal-swap equal-compose)
+
 (claim equal-map
   (implicit ((x type)
              (y type)

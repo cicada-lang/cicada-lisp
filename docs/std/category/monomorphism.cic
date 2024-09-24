@@ -1,5 +1,7 @@
 (import category "category.cic")
 
+(export monomorphism)
+
 (define-class monomorphism ()
   :cat category
   :dom @cat:object

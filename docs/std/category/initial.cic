@@ -1,5 +1,7 @@
 (import category "category.cic")
 
+(export initial)
+
 (define-class initial ()
   :cat category
   :object @cat:object

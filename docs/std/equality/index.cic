@@ -1,1 +1,1 @@
-(import equal-map equal-swap equal-compose "utils.cic")
+(export equal-map equal-swap equal-compose "utils.cic")

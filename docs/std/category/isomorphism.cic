@@ -3,6 +3,8 @@
 ;; Two objects have the same structure iff they are isomorphic,
 ;; and an "abstract object" is an isomorphism class of objects.
 
+(export isomorphism)
+
 (define-class isomorphism ()
   :cat category
   :dom @cat:object

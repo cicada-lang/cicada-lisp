@@ -13,6 +13,8 @@
 ;; Functor can also be called natural-construction,
 ;; which will let the term `NaturalTransformation` make sense.
 
+(export functor)
+
 (define-class functor ()                ;
   :dom category
   :cod category

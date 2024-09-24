@@ -1,5 +1,7 @@
 (import category isomorphism "../category/index.cic")
 
+(export groupoid)
+
 (define-class groupoid (category)
   :inverse
   (implicit ((x @object)

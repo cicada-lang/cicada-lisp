@@ -7,6 +7,8 @@
 ;; if a terminal object exists, it is unique up to unique isomorphism.
 ;; - https://github.com/xieyuheng/cat/blob/master/src/category.agda
 
+(export terminal-iso terminal-iso-unique)
+
 (claim terminal-iso
   (forall ((cat category)
            (x (terminal cat))

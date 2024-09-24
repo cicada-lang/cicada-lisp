@@ -31,6 +31,8 @@
 ;; from the category of topology spaces
 ;; to the category of abelian-groups.)
 
+(export natural-transformation)
+
 (define-class natural-transformation ()
   :dom category
   :cod category

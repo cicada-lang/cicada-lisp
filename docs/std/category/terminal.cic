@@ -1,5 +1,7 @@
 (import category "category.cic")
 
+(export terminal)
+
 (define-class terminal ()
   :cat category
   :object @cat:object

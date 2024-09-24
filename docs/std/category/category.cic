@@ -2,7 +2,7 @@
 ;; there corresponds a category whose objects have that structure,
 ;; and whose morphisms preserve it.
 
-;; 模仿 ruby，用 @ 前缀来区分 instance variables。
+(export category)
 
 (define-class category ()
   :object type
