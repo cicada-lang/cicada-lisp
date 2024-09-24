@@ -2,12 +2,12 @@
 
 (define-class epimorphism ()
   :cat category
-  :dom (@cat:object)
-  :cod (@cat:object)
+  :dom @cat:object
+  :cod @cat:object
   :morphism (@cat:morphism @dom @cod)
 
   :cancel-left
-  (implicit ((x (@cat:object))
+  (implicit ((x @cat:object)
              (f (@cat:morphism @cod x))
              (g (@cat:morphism @cod x)))
     (-> (equal (@cat:morphism @dom x)

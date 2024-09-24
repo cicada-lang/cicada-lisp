@@ -16,26 +16,26 @@
 (define-class functor ()                ;
   :dom category
   :cod category
-  :map (-> (@dom:object) (@cod:object))
+  :map (-> @dom:object @cod:object)
 
   :fmap
-  (implicit ((x (@dom:object))
-             (y (@dom:object)))
+  (implicit ((x @dom:object)
+             (y @dom:object))
     (forall ((f (@dom:morphism x y)))
       (@cod:morphism (@map x) (@map y))))
 
   :fmap-preserve-compose
-  (implicit ((x (@dom:object))
-             (y (@dom:object))
-             (z (@dom:object)))
+  (implicit ((x @dom:object)
+             (y @dom:object)
+             (z @dom:object))
     (forall ((f (@dom:morphism x y))
              (g (@dom:morphism y z)))
       (equal (@cod:morphism (@map x) (@map z))
              (@fmap (@dom:compose f g))
-             (@cod.compose (@fmap f) (@fmap g)))))
+             (@cod:compose (@fmap f) (@fmap g)))))
 
   :fmap-preserve-id
-  (forall ((x (@dom:object)))
+  (forall ((x @dom:object))
     (equal (@cod:morphism (@map x) (@map x))
            (@fmap (@dom:id x))
            (@cod:id (@map x)))))

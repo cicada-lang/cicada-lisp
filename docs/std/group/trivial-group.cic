@@ -12,10 +12,10 @@
     :inverse-left (lambda (x) refl)
     :inverse-right (lambda (x) refl)))
 
-(trivial-group:mul)
+trivial-group:mul
 (trivial-group:mul sole)
 (trivial-group:mul sole sole)
 
-(trivial-group:div)
+trivial-group:div
 (trivial-group:div sole)
 (trivial-group:div sole sole)

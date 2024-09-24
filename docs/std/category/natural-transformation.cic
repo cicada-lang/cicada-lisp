@@ -41,12 +41,12 @@
   :tar (functor @dom @cod)
 
   :component
-  (forall ((x (@dom:object)))
+  (forall ((x @dom:object))
     (@cod:morphism (@src:map x) (@tar:map x)))
 
   :naturality
-  (implicit ((x (@dom:object))
-             (y (@dom:object)))
+  (implicit ((x @dom:object)
+             (y @dom:object))
     (forall ((f (@dom:morphism x y)))
       (equal (@cod:morphism (@src:map x) (@tar:map y))
              (@cod:compose (@component x) (@tar:fmap f))

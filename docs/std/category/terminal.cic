@@ -2,13 +2,13 @@
 
 (define-class terminal ()
   :cat category
-  :object (@cat:object)
+  :object @cat:object
 
   :morphism
-  (forall ((x (@cat:object)))
+  (forall ((x @cat:object))
     (@cat:morphism x @object))
 
   :morphism-unique
-  (implicit ((x (@cat:object)))
+  (implicit ((x @cat:object))
     (forall ((f (@cat:morphism x @object)))
       (equal (@cat:morphism x @object) f (@morphism x)))))

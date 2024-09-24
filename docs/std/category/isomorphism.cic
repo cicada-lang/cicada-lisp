@@ -5,8 +5,8 @@
 
 (define-class isomorphism ()
   :cat category
-  :dom (@cat:object)
-  :cod (@cat:object)
+  :dom @cat:object
+  :cod @cat:object
   :morphism (@cat:morphism @dom @cod)
   :inverse (@cat:morphism @cod @dom)
 

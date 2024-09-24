@@ -2,12 +2,12 @@
 
 (define-class monomorphism ()
   :cat category
-  :dom (@cat:object)
-  :cod (@cat:object)
+  :dom @cat:object
+  :cod @cat:object
   :morphism (@cat:morphism @dom @cod)
 
   :cancel-right
-  (implicit ((x (@cat:object))
+  (implicit ((x @cat:object)
              (f (@cat:morphism x @dom))
              (g (@cat:morphism x @dom)))
     (-> (equal (@cat:morphism x @cod)
@@ -17,4 +17,4 @@
 
 ;; NOTE Examples:
 ;;   (check mono (monomorphism cat x y))
-;;   (check (mono:morphism) (mono:cat:morphism x y))
+;;   (check mono:morphism (mono:cat:morphism x y))

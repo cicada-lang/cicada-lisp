@@ -2,13 +2,13 @@
 
 (define-class initial ()
   :cat category
-  :object (@cat:object)
+  :object @cat:object
 
   :morphism
-  (forall ((x (@cat:object)))
+  (forall ((x @cat:object))
     (@cat:morphism @object x))
 
   :morphism-unique
-  (implicit ((x (@cat:object)))
+  (implicit ((x @cat:object))
     (forall ((f (@cat:morphism @object x)))
       (equal (@cat:morphism @object x) f (@morphism x)))))

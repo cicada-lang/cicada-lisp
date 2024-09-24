@@ -17,8 +17,8 @@
 
 (claim group-div
   (forall ((g group))
-    (-> (g:element) (g:element)
-        (g:element))))
+    (-> g:element g:element
+        g:element)))
 
-(define (group-div (g group) (x (g:element)) (y (g:element)))
+(define (group-div (g group) (x g:element) (y g:element))
   (g:mul x (g:inverse y)))
