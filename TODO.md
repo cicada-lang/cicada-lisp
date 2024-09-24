@@ -1,6 +1,6 @@
 # std
 
-[std] equality/
+[std] equality -- equal-map & equal-swap & equal-compose
 
 [std] boolean-lattice/
 
