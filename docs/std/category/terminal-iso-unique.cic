@@ -1,0 +1,46 @@
+(import category "category.cic")
+(import terminal "terminal.cic")
+(import isomorphism "isomorphism.cic")
+(import equal-swap equal-compose "../equality/index.cic")
+
+;; Terminal is an universal construction,
+;; if a terminal object exists, it is unique up to unique isomorphism.
+;; - https://github.com/xieyuheng/cat/blob/master/src/category.agda
+
+(claim terminal-iso
+  (forall ((cat category)
+           (x (terminal cat))
+           (y (terminal cat)))
+    (isomorphism cat x:object y:object)))
+
+(define (terminal-iso
+         (cat category)
+         (x (terminal cat))
+         (y (terminal cat)))
+  (let ((f (x:morphism y:object))
+        (g (y:morphism x:object)))
+    (create isomorphism
+      :cat cat
+      :dom x:object
+      :cod y:object
+      :morphism (y:morphism x:object)
+      :inverse (x:morphism y:object)
+
+      :inverse-left
+      (equal-compose
+       (x:morphism-unique (cat:compose g f))
+       (equal-swap (x:morphism-unique (cat:id x:object))))
+
+      :inverse-right
+      (equal-compose
+       (y:morphism-unique (cat:compose f g))
+       (equal-swap (y:morphism-unique (cat:id y:object)))))))
+
+(define (terminal-iso-unique
+         (cat category)
+         (x (terminal cat))
+         (y (terminal cat))
+         (f (isomorphism cat x:object y:object))
+         (g (isomorphism cat x:object y:object)))
+  :return-type (equal (isomorphism cat x:object y:object) f g)
+  TODO)

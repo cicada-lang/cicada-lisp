@@ -1,7 +1,5 @@
 # std
 
-[std] category/ -- terminal-iso-unique.cic
-
 [std] equality/
 
 [std] boolean-lattice/
