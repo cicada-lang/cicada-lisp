@@ -1,5 +1,7 @@
 (import monoid "monoid.cic")
 
+(export group)
+
 (define-class group (monoid)
   :inverse (-> @element @element)
 

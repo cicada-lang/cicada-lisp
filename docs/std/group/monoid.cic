@@ -1,6 +1,6 @@
 (import semigroup "semigroup.cic")
 
-;; 当有继承的时候，带有 @ sigil 还挺合理的。
+(export monoid)
 
 (define-class monoid (semigroup)
   :id element

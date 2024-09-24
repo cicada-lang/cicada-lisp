@@ -1,3 +1,5 @@
+(export semigroup)
+
 (define-class semigroup ()
   :element type
 

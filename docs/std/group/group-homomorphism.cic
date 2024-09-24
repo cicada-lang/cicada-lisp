@@ -2,6 +2,8 @@
 (import category "../category/index.cic")
 (import equal-swap equal-map equal-compose "../equality/index.cic")
 
+(export group-homomorphism)
+
 (define-class group-homomorphism ()
   :dom group
   :cod group
