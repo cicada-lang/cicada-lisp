@@ -1,0 +1,5 @@
+(import category "category.cic")
+(import functor "functor.cic")
+(import naturaltrans-formation "naturaltrans-formation.cic")
+(import isomorphism "isomorphism.cic")
+(import trivial-category "trivial-category.cic")
