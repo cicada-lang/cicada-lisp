@@ -1,6 +1,5 @@
 # std
 
-[std] category/ -- trivial-category.cic
 [std] category/ -- terminal-iso-unique.cic
 
 [std] equality/

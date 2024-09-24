@@ -1,0 +1,11 @@
+(import category "category.cic")
+
+(define trivial-category
+  (create category
+    :object trivial
+    :morphism (lambda (dom cod) trivial)
+    :id (lambda (x) sole)
+    :compose (lambda (f g) sole)
+    :id-left (lambda (f) refl)
+    :id-right (lambda (f) refl)
+    :compose-associative (lambda (f g h) refl)))
