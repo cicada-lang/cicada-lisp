@@ -38,6 +38,9 @@ Martin Fowler 在 "Refactoring" 一书中，
 
 - 先用 JS 实现 cicada-lisp 的解释器。
 - 然后用 cicada-lisp 实现自身的编译器，编译到 XVM。
+  - 读一些编译器的书可能太枯燥了，
+    但是如果是用 cicada 来写里面的例子就不枯燥了。
+    比如 EOPL 和 SICP 还有 UI 的新编译器课程。
 - XVM 支持 actor model，类似 erlang 虚拟机。
 
 # 关于 lisp 的 naming convenient
