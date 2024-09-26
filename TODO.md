@@ -1,6 +1,7 @@
 # datatype
 
-[datatype] either
+[datatype] less-than
+[datatype] fin
 
 # std
 

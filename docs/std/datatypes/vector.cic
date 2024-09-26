@@ -1,0 +1,6 @@
+(define-datatype (vector (element type)) ((length nat))
+  :null (vector element nat:zero)
+  :cons (implicit ((prev nat))
+          (forall ((head element)
+                   (tail (vector element prev)))
+            (vector element (nat:add1 prev)))))
