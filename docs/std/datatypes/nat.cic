@@ -1,8 +1,4 @@
 (define-datatype nat ()
-  (zero nat)
-  ((add1 (prev nat)) nat))
-
-(define-datatype nat ()
   :zero nat
   :add1 (-> nat nat))
 
