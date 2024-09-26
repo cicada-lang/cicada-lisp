@@ -1,6 +1,6 @@
 # datatype
 
-[datatype] boolean
+[datatype] either
 
 # std
 
@@ -17,5 +17,3 @@
 [std] boolean-lattice/ -- idempotent.cic
 [std] boolean-lattice/ -- order.cic
 [std] boolean-lattice/ -- unique-id.cic
-
-

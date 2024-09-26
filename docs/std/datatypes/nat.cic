@@ -12,4 +12,4 @@
 (define (add x y)
   (match x
     (nat:zero y)
-    ((nat:add1 prev) (nat:add1 (add prev)))))
+    ((nat:add1 ,prev) (nat:add1 (add prev)))))
