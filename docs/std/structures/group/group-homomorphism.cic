@@ -2,7 +2,9 @@
 (import category "../category/index.cic")
 (import equal-swap equal-map equal-compose "../equality/index.cic")
 
-(export group-homomorphism)
+(export group-homomorphism
+        id-group-homomorphism
+        compose-group-homomorphism)
 
 (define-class group-homomorphism ()
   :dom group
@@ -26,7 +28,7 @@
   (forall ((G group))
     (group-homomorphism :dom G :cod G)))
 
-(define (id-group-homomorphism (G group))
+(define (id-group-homomorphism G)
   (create group-homomorphism
     :dom G
     :cod G
@@ -42,12 +44,7 @@
              (g (group-homomorphism H K)))
       (group-homomorphism G K))))
 
-(define (compose-group-homomorphism
-         (implicit G group)
-         (implicit H group)
-         (implicit H group)
-         (f (group-homomorphism G H))
-         (g (group-homomorphism H K)))
+(define (compose-group-homomorphism (implicit G H K) f g)
   (create group-homomorphism
     :dom G
     :cod K

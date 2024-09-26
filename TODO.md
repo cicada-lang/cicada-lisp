@@ -1,8 +1,5 @@
 # std
 
-[std] group/ -- group-homomorphism.test.cic
-[std] group/ -- group-category.cic
-
 [std] boolean-lattice/ -- absorb.cic
 [std] boolean-lattice/ -- associative.todo.cic
 [std] boolean-lattice/ -- boolean-domain.cic
