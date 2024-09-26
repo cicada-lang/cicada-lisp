@@ -1,6 +1,5 @@
 # datatype
 
-[datatype] less-than
 [datatype] fin
 
 # std
