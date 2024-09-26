@@ -1,7 +1,3 @@
-# datatype
-
-[datatype] list
-
 # std
 
 [std] group/ -- group-homomorphism.test.cic

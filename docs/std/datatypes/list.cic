@@ -1,0 +1,3 @@
+(define-datatype list (element type) ()
+  :null (list element)
+  :cons (-> element (list element) (list element)))
