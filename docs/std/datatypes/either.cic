@@ -1,0 +1,3 @@
+(define-datatype (either (left type) (right type))
+  :left (-> left (either left right))
+  :right (-> right (either left right)))

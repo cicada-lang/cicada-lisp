@@ -1,4 +1,4 @@
-(define-datatype bool ()
+(define-datatype bool
   :true bool
   :false bool)
 
