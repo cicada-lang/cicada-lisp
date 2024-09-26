@@ -1,6 +1,6 @@
 # datatype
 
-[datatype] fin
+[datatype] list
 
 # std
 
