@@ -1,3 +1,9 @@
+# datatype
+
+[datatype] boolean
+
+# std
+
 [std] group/ -- group-homomorphism.test.cic
 [std] group/ -- group-category.cic
 
@@ -11,3 +17,5 @@
 [std] boolean-lattice/ -- idempotent.cic
 [std] boolean-lattice/ -- order.cic
 [std] boolean-lattice/ -- unique-id.cic
+
+
