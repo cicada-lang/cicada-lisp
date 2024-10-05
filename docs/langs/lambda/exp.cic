@@ -1,0 +1,20 @@
+(define-datatype exp () ()
+  :var (forall ((name string)) exp)
+  :ap (forall ((target exp) (arg exp)) exp)
+  :fn (forall ((name string) (body exp)) exp))
+
+(define-datatype value () ()
+  ...)
+
+(define-datatype env () ()
+  :empty env
+  :cons
+  (forall ((name string)
+           (a-value value)
+           (rest-env env))
+    env))
+
+(claim evaluate (-> env exp exp))
+(define (evaluate an-env an-exp)
+  (match an-exp
+    ()))

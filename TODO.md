@@ -1,3 +1,9 @@
+define-datatype -- use explicit constructor name -- no `:`
+
+尝试用假想的语言写一些简单解释器 -- lambda
+
+将 inference rule 翻译成 propagator network
+
 # std
 
 [std] boolean-lattice/ -- absorb.cic
