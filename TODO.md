@@ -1,7 +1,3 @@
-尝试用假想的语言写一些简单解释器 -- lambda
-
-2024-10-06-暂时再次放弃-lisp-语法.md
-
 # std
 
 [std] boolean-lattice/ -- absorb.cic
