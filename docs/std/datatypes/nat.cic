@@ -1,15 +1,12 @@
 (define-datatype nat () ()
-  :zero nat
-  :add1 (-> nat nat))
+  (zero nat)
+  (add1 ((prev nat)) nat))
 
-(check nat:zero nat)
-(check nat:add1 (-> nat nat))
-
-(check (nat:add1 nat:zero) nat)
-(check (nat:add1 (nat:add1 nat:zero)) nat)
+(check (add1 zero) nat)
+(check (add1 (add1 zero)) nat)
 
 (claim add (-> nat nat nat))
 (define (add x y)
   (match x
-    (nat:zero y)
-    ((nat:add1 ,prev) (nat:add1 (add prev)))))
+    (zero y)
+    ((add1 ,prev) (add1 (add prev)))))

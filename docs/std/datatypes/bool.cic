@@ -1,9 +1,6 @@
 (define-datatype bool () ()
-  :true bool
-  :false bool)
-
-(define true bool:true)
-(define false bool:false)
+  (true bool)
+  (false bool))
 
 (claim not (-> bool bool))
 (define (not x)

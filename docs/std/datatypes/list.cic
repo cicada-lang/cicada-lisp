@@ -1,9 +1,11 @@
 (define-datatype list (element type) ()
-  :null (list element)
-  :cons (-> element (list element) (list element)))
+  (null-list (list element))
+  (cons-list ((head element)
+              (tail (list element)))
+             (list element)))
 
-(claim length (implicit ((a type)) (-> (list a) nat)))
-(define (length (implicit a) a-list)
+(claim length (implicit ((element type)) (-> (list element) nat)))
+(define (length (implicit element) a-list)
   (match a-list
-    ((list:null) nat:zero)
-    ((list:cons ,head ,tail) (nat:add1 (length tail)))))
+    ((null-list) zero)
+    ((cons-list ,head ,tail) (add1 (length tail)))))
